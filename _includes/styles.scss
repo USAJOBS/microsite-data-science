@@ -1,0 +1,347 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+// Typography
+$em-base:             10px;
+$rs:                  17px;
+$base-font-size-px:   17px;
+$base-font-size:      rem($base-font-size-px);
+$xsmall-font-size:    rem(12px);
+$small-font-size:     rem(14px);
+$lead-font-size:      rem(19px);
+$title-font-size:     rem(52px);
+
+$h1-font-size:  44px;
+$h2-font-size:  34px;
+$h3-font-size:  24px;
+$h4-font-size:  19px;
+$h5-font-size:  16px;
+$h6-font-size:  13px;
+
+$base-line-height:    1.5;
+$heading-line-height: 1.3;
+$lead-line-height:    1.7;
+
+$font-normal:         400;
+$font-bold:           700;
+
+$font-serif: Merriweather,Georgia,Cambria,"Times New Roman",Times, serif;
+$font-sans: "Source Sans Pro","Helvetica Neue",Helvetica,'Roboto', sans-serif;
+
+// Breakpoints
+$SM-screen:    30em;      //  480px at 16px base font - USDS standard
+$M-screen:     37.5em;    //  600px at 16px base font - USDS standard
+$ML-screen:    48em;      //  768px at 16px base font
+$L-screen:     62em;      //  992px at 16px base font
+$XL-screen:    75em;      // 1200px at 16px base font - USDS standard
+$XXL-screen:   85.375em;  // 1366px at 16px base font
+$XXXL-screen:  100em;     // 1600px at 16px base font
+$XXXXL-screen: 120em;     // 1920px at 16px base font
+
+// min-width
+$SM:    (media: $SM-screen, columns: 2);
+$M:     (media: $M-screen, columns: 6);
+$ML:    (media: $ML-screen, columns: 6);
+$L:     (media: $L-screen, columns: 12);
+$XL:    (media: $XL-screen, columns: 12);
+$XXL:   (media: $XXL-screen, columns: 12);
+$XXXL:  (media: $XXXL-screen, columns: 16);
+$XXXXL: (media: $XXXXL-screen, columns: 16);
+
+
+// USWDS colors
+$color-primary:              #0071bc;
+$color-primary-darker:       #205493;
+$color-primary-darkest:      #112e51;
+
+$color-secondary:            #e31c3d;
+$color-secondary-dark:       #cd2026;
+$color-secondary-darkest:    #981b1e;
+
+$color-white:                #ffffff;
+$color-base:                 #212121;
+$color-black:                #000000;
+
+$color-gray-dark:            #323a45;
+$color-gray:                 #5b616b; // lighten($color-gray-dark, 20%)
+$color-gray-medium:          #757575; // lightest gray that passes color contrast
+$color-gray-light:           #aeb0b5; // lighten($color-gray-dark, 60%)
+$color-gray-lighter:         #d6d7d9; // lighten($color-gray-dark, 80%)
+$color-gray-lightest:        #f1f1f1; // lighten($color-gray-dark, 91%)
+
+$color-visited:              #4c2c92;
+
+// Layout
+$site-max-width-L:    rem(1600px);
+$article-max-width:   rem(600px);
+$site-margins:        3rem;
+$site-margins-mobile: 1.5rem;
+$grid-margins:        3rem;
+
+// Spacing
+$size-XS: 0.25rem;              // 2.5px
+$size-base: 0.5rem;             // 5px
+$size-S: $size-base * 2;        // 10px
+$size-default: $size-base * 3;  // 15px
+$size-SM: $size-base * 4;       // 20px - Use this sparingly
+$size-M: $size-base * 6;        // 30px
+$size-L: $size-base * 9;        // 45px
+$size-XL: $size-M * 2;          // 60px
+$size-XXL: $size-default * 5;   // 75px
+
+$space-inset-default: $size-default $size-default $size-default $size-default;
+$space-inset-XS: $size-XS $size-XS $size-XS $size-XS;
+$space-inset-base: $size-base $size-base $size-base $size-base;
+$space-inset-M: $size-M $size-M $size-M $size-M;
+$space-inset-L: $size-L $size-L $size-L $size-L;
+
+$space-stack-default: 0 0 $size-default 0;
+$space-stack-XS: 0 0 $size-XS 0;
+$space-stack-S: 0 0 $size-S 0;
+$space-stack-M: 0 0 $size-M 0;
+$space-stack-L: 0 0 $size-L 0;
+$space-stack-XL: 0 0 $size-XL 0;
+$space-stack-XXL: 0 0 $size-XXL 0;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin font-feature-settings {
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+// Grid
+.usajobs-grid,
+.usajobs-grid-full {
+  @include grid-container();
+  max-width: $site-max-width-L;
+  padding: 0 $size-default;
+
+  @include grid-media($ML) {
+    padding-left: $size-M;
+    padding-right: $size-M;
+  }
+}
+
+// Base styles
+html {
+  font-family: $font-sans;
+  font-size: 10px;
+  @include box-sizing(border-box);
+}
+
+/* The * selector is banned from AMP - need to find another way
+*,
+*::before,
+*::after {
+  @include box-sizing(inherit);
+}
+*/
+
+body {
+  @include font-smoothing;
+  @include font-feature-settings;
+  font-size: $base-font-size;
+  background-color: $color-white;
+  margin: 0;
+  padding: 0;
+  color: $color-base;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-family: $font-serif;
+  font-weight: $font-bold;
+  line-height: $heading-line-height;
+  margin-bottom: $size-base;
+  margin-top: $size-default;
+  font-size: $h1-font-size;
+  font-size: rem($h1-font-size);
+}
+
+// scss-lint:disable PropertyCount
+.usa-button {
+  @include font-smoothing;
+  @include margin(0.5em 0.5em 0.5em null);
+  appearance: none;
+  background-color: $color-primary;
+  border: 0;
+  border-radius: 0.3rem;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: $lead-font-size;
+  font-weight: $font-bold;
+  line-height: 1;
+  outline: none;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  @include grid-media($SM) {
+    width: auto;
+  }
+}
+
+.usa-button-secondary {
+  background-color: $color-secondary;
+
+  &:hover,
+  &.usa-button-hover {
+    background-color: $color-secondary-dark;
+  }
+
+  &:active,
+  &.usa-button-active {
+    background-color: $color-secondary-darkest;
+  }
+}
+
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: $color-gray;
+    }
+  }
+}
+
+amp-img {
+}
+
+
+// Very top banner from the standards
+.usa-banner {
+  background-color: $color-gray-lightest;
+  padding-bottom: 0.7rem;
+
+  @include grid-media($SM) {
+    font-size: $h6-font-size;
+    padding-bottom: 0;
+  }
+}
+
+.usa-banner-header {
+  @include padding(0.55rem null);
+  font-size: 1.2rem;
+  font-weight: $font-normal;
+
+  @include grid-media($SM) {
+    @include padding(0 null);
+  }
+
+  p {
+    display: inline;
+    @include margin(0 null);
+    overflow: hidden;
+    vertical-align: middle;
+
+    @include grid-media($SM) {
+      @include margin(2px null);
+      display: inline-block;
+    }
+  }
+
+  &__img {
+    float: left;
+    margin-right: 1rem;
+    margin-top: 1px;
+
+    @include grid-media($SM) {
+      margin-right: 0.7rem;
+    }
+  }
+}
+
+.usa-banner-inner {
+  @include padding(null $site-margins-mobile);
+  max-width: $site-max-width-L;
+  // would prefer to avoid this but the amp-img is doing something odd to the height
+  height: 2.2rem;
+
+  @include grid-media($L) {
+    @include padding(null $site-margins);
+  }
+}
+
+// Hero
+.usajobs-ms-hero {
+  position: relative;
+
+  &__inner {
+    background: $color-primary-darkest;
+    padding: $space-inset-default;
+
+    @include grid-media($ML) {
+      position: absolute;
+      top: 4px;
+      left: 5%;
+      width: 50%;
+      padding: $space-inset-M;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: $color-white;
+  }
+}
+
+main {
+  display: block;
+
+  a {
+    text-decoration: underline;
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      color: $color-primary-darker;
+      outline: 0;
+      background-color: transparent;
+    }
+  }
+
+  a.usa-button,
+  a.usa-button-big,
+  a.usajobs-button {
+    text-decoration: none;
+  }
+
+  p {
+    line-height: $base-line-height;
+    margin: 1em 0;
+  }
+}
+
+.cf {
+  @include clearfix;
+}
+
+.usajobs-shell {
+  @include clearfix;
+  position: relative;
+  max-width: $site-max-width-L;
+  margin-left: auto;
+  margin-right: auto;
+  background: $color-white;
+}
