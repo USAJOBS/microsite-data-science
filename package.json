@@ -1,0 +1,52 @@
+{
+  "name": "USAJOBS_Microsite_Data_Science",
+  "version": "1.0.0",
+  "description": "A microsite to highlight data science positions within the Federal Government.",
+  "keywords": [
+    "USAJOBS",
+    "gov",
+    "data-science",
+    "government"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/USAJOBS/microsite-data-science"
+  },
+  "author": "Lab @ OPM",
+  "contributors": [
+    "Hareem Mannan <hareem.mannan@opm.gov>",
+    "Matthew Dingee <matthew.dingee@opm.gov>",
+    "Debbie LeNard <deborah.lenard@opm.gov>",
+    "Kyhry Taylor <kyhry.taylor@opm.gov>",
+    "Peter Toohey <peter.toohey@opm.gov>"
+  ],
+  "license": "SEE LICENSE in LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/USAJOBS/microsite-data-science/issues"
+  },
+  "homepage": "http://usajobs.github.io/microsite-data-science/",
+  "devDependencies": {
+    "broken-link-checker": "^0.7.4",
+    "grunt": "^1.0.1",
+    "grunt-a11y": "^0.1.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-html": "^8.3.2",
+    "grunt-link-checker": "^0.2.0",
+    "grunt-mdspell": "^0.4.0",
+    "grunt-notify": "^0.4.5",
+    "grunt-scss-lint": "^0.5.0",
+    "grunt-shell": "^2.1.0",
+    "load-grunt-tasks": "^3.5.0",
+    "opener": "^1.4.2",
+    "time-grunt": "^1.4.0"
+  },
+  "scripts": {
+    "all": "npm run build && npm run deploy",
+    "build": "grunt build",
+    "deploy:cloud": "grunt build; cf push",
+    "deploy": "git subtree push --prefix _dist origin gh-pages",
+    "open:repo": "opener http://github.com/USAJOBS/microsite-data-science",
+    "start": "grunt serve",
+    "test": "grunt htmllint; blc http://usajobs.github.io/microsite-data-science/ -e -r"
+  }
+}

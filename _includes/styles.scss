@@ -212,19 +212,6 @@ h1 {
   }
 }
 
-.icon {
-  > svg {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-
-    path {
-      fill: $color-gray;
-    }
-  }
-}
-
 amp-img {
 }
 
@@ -286,6 +273,7 @@ amp-img {
 // Hero
 .usajobs-ms-hero {
   position: relative;
+  max-width: 100%;
 
   &__inner {
     background: $color-primary-darkest;

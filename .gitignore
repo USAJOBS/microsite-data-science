@@ -1,4 +1,10 @@
-_site
 .sass-cache
 .jekyll-metadata
 .DS_Store
+*.swp
+*-ck.js
+.htaccess
+.htpasswd
+npm-debug.log
+node_modules
+

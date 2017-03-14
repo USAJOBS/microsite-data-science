@@ -11,7 +11,6 @@ email: matthew.dingee@opm.gov
 description: >
   Find out what it takes to have a career in data science within the Federal Government
 logo: "/assets/images/logo-2x.png"
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://usajobs.github.io/microsite-data-science/" # the base hostname & protocol for your site
 
 exclude:
@@ -27,6 +26,9 @@ exclude:
 - npm-debug.log
 - node_modules
 
+baseurl: '/microsite-data-science'
+destination: ./_dist
+
 author:
   name: USAJOBS
   url: https://usajobs.github.io/
@@ -36,7 +38,7 @@ repository:
   url: https://github.com/USAJOBS/microsite-data-science/
 
 # Google Analytics
-analytics_id: ""
+analytics_id: "UA-33523145-1"
 
 # Build settings
 markdown: kramdown
