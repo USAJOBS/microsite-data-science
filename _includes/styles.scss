@@ -1,5 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+@import 'font-awesome/scss/font-awesome';
 
 // Typography
 $em-base:             10px;
@@ -58,6 +59,8 @@ $color-secondary:            #e31c3d;
 $color-secondary-dark:       #cd2026;
 $color-secondary-darkest:    #981b1e;
 
+$color-primary-alt-darkest:  #046b99;
+
 $color-white:                #ffffff;
 $color-base:                 #212121;
 $color-black:                #000000;
@@ -69,7 +72,10 @@ $color-gray-light:           #aeb0b5; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #d6d7d9; // lighten($color-gray-dark, 80%)
 $color-gray-lightest:        #f1f1f1; // lighten($color-gray-dark, 91%)
 
+$color-focus:                #3e94cf;
 $color-visited:              #4c2c92;
+
+$focus-shadow: 0 0 3px $color-focus, 0 0 7px $color-focus;
 
 // Layout
 $site-max-width-L:    rem(1600px);
@@ -94,6 +100,10 @@ $space-inset-XS: $size-XS $size-XS $size-XS $size-XS;
 $space-inset-base: $size-base $size-base $size-base $size-base;
 $space-inset-M: $size-M $size-M $size-M $size-M;
 $space-inset-L: $size-L $size-L $size-L $size-L;
+
+$space-inset-section-narrow: $size-M $size-default;
+$space-inset-section-M: $space-inset-M;
+$space-inset-section-wide: $size-L $size-XL $size-L $size-XL;
 
 $space-stack-default: 0 0 $size-default 0;
 $space-stack-XS: 0 0 $size-XS 0;
@@ -123,11 +133,76 @@ $space-stack-XXL: 0 0 $size-XXL 0;
   font-feature-settings: "liga", "dlig";
 }
 
+@mixin header {
+  font-family: $font-serif;
+  font-weight: $font-bold;
+  line-height: $heading-line-height;
+  margin-bottom: $size-base;
+  margin-top: 0;
+}
+
+@mixin h1 {
+  @include header();
+  font-size: $h1-font-size;
+  font-size: rem($h1-font-size);
+  color: $color-primary-darkest;
+}
+
+@mixin h2 {
+  @include header();
+  font-size: $h2-font-size;
+  font-size: rem($h2-font-size);
+  color: $color-primary-darkest;
+}
+
+@mixin h3 {
+  @include header();
+  font-size: $h3-font-size;
+  font-size: rem($h3-font-size);
+}
+
+@mixin h4 {
+  @include header();
+  font-size: $h4-font-size;
+  font-size: rem($h4-font-size);
+}
+
+@mixin unstyledList() {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    display: list-item;
+    margin: 0;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@mixin makeCircle($size, $border: none, $bg-color: inherit, $color: $color-white) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: 50%;
+  color: $color;
+  background-color: $bg-color;
+  box-shadow: 0 0 0 2px $border inset;
+}
+
+
 // Grid
 .usajobs-grid,
 .usajobs-grid-full {
   @include grid-container();
-  max-width: $site-max-width-L;
   padding: 0 $size-default;
 
   @include grid-media($ML) {
@@ -139,7 +214,7 @@ $space-stack-XXL: 0 0 $size-XXL 0;
 // Base styles
 html {
   font-family: $font-sans;
-  font-size: 10px;
+  font-size: $em-base;
   @include box-sizing(border-box);
 }
 
@@ -164,20 +239,36 @@ body {
 }
 
 h1 {
-  font-family: $font-serif;
-  font-weight: $font-bold;
-  line-height: $heading-line-height;
-  margin-bottom: $size-base;
-  margin-top: $size-default;
-  font-size: $h1-font-size;
-  font-size: rem($h1-font-size);
+  @include h1();
 }
 
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+h4 {
+  @include h4();
+}
+
+// BUTTONS
+$button-stroke: inset 0 0 0 2px;
 // scss-lint:disable PropertyCount
-.usa-button {
+.usa-button,
+.usa-button-primary,
+.usa-button:visited,
+.usa-button-primary:visited,
+button,
+[type="button"],
+[type="submit"],
+[type="reset"],
+[type="image"] {
   @include box-sizing(inherit);
   @include font-smoothing;
-  @include margin(0.5em 0.5em 0.5em null);
+  @include margin(0.5em 0.5em null null);
   appearance: none;
   background-color: $color-primary;
   border: 0;
@@ -199,19 +290,86 @@ h1 {
     width: auto;
     padding: $size-default $size-M;
   }
-}
 
-.usa-button-secondary {
-  background-color: $color-secondary;
-
-  &:hover,
-  &.usa-button-hover {
-    background-color: $color-secondary-dark;
+  &:hover {
+    background-color: $color-primary-darker;
+    border-bottom: 0;
+    color: $color-white;
+    text-decoration: none;
   }
 
-  &:active,
-  &.usa-button-active {
-    background-color: $color-secondary-darkest;
+  &:focus {
+    box-shadow: $focus-shadow;
+  }
+
+  &:active {
+    background-color: $color-primary-darkest;
+  }
+
+
+  &.usa-button-secondary {
+    background-color: $color-secondary;
+
+    &:hover,
+    &.usa-button-hover {
+      background-color: $color-secondary-dark;
+    }
+
+    &:active,
+    &.usa-button-active {
+      background-color: $color-secondary-darkest;
+    }
+  }
+
+  &.usa-button-outline {
+    background-color: $color-white;
+    box-shadow: $button-stroke $color-primary;
+    color: $color-primary;
+
+    &:hover,
+    &.usa-button-hover {
+      box-shadow: $button-stroke $color-primary-darker;
+      color: $color-primary-darker;
+    }
+
+    &:active,
+    &.usa-button-active {
+      box-shadow: $button-stroke $color-primary-darkest;
+      color: $color-primary-darkest;
+    }
+
+    &:focus,
+    &.usa-button-focus {
+      box-shadow: $button-stroke $color-primary-darkest, $focus-shadow;
+    }
+  }
+
+  &.usa-button-outline-inverse {
+    background: transparent;
+    box-shadow: $button-stroke $color-white;
+    color: $color-white;
+
+    &:hover,
+    &.usa-button-hover {
+      box-shadow: $button-stroke $color-gray-lighter;
+      color: $color-gray-lighter;
+    }
+
+    &:active,
+    &.usa-button-active {
+      box-shadow: $button-stroke $color-gray-light;
+      color: $color-gray-lighter;
+    }
+
+    &:focus,
+    &.usa-button-focus {
+      box-shadow: $button-stroke $color-gray-light, $focus-shadow;
+    }
+  }
+
+  &.usa-button-big {
+    font-size: 1.9rem;
+    padding: 1.5rem 3rem;
   }
 }
 
@@ -267,19 +425,22 @@ amp-img {
 
   &__inner {
     background: $color-primary-darkest;
-    padding: $space-inset-default;
+    padding: $space-inset-section-narrow;
+
+    @include grid-media($M) {
+      padding: $space-inset-section-M;
+    }
 
     @include grid-media($L) {
       position: absolute;
       top: 4px;
       left: 5%;
       width: 50%;
-      padding: $space-inset-M;
+      padding: $space-inset-section-wide;
     }
   }
 
   &__title {
-    margin-top: 0;
     color: $color-white;
   }
 }
@@ -322,4 +483,188 @@ main {
   margin-left: auto;
   margin-right: auto;
   background: $color-white;
+}
+
+// Components
+.usajobs-ms-section {
+  padding: $space-inset-section-narrow;
+
+  @include grid-media($M) {
+    padding: $space-inset-section-M;
+  }
+
+  @include grid-media($L) {
+    padding: $space-inset-section-wide;
+  }
+
+  &.priyanka {
+    @include grid-media($ML) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__body {
+    max-width: $site-max-width-L;
+
+    p {
+      max-width: $article-max-width;
+    }
+  }
+
+  &__cta-center {
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: $font-sans;
+    margin-top: $size-default;
+  }
+
+  &__quote {
+    margin: $size-default;
+    font-family: $font-serif;
+    font-style: italic;
+    color: $color-gray;
+  }
+
+  &__list {
+    @include unstyledList();
+    width: 100%;
+  }
+}
+
+.usajobs-ms-section__list .usajobs-ms-section-item {
+  display: inline-block;
+  margin-top: $size-M;
+  width: 100%;
+
+  @include grid-media($ML) {
+    float: left;
+    display: block;
+    width: 47.5854205965%;
+    margin-right: 4.8291588071%;
+  }
+
+  &:nth-child(2n) {
+    @include grid-media($ML) {
+      margin-right: 0;
+    }
+  }
+}
+
+.usajobs-ms-section-item {
+  &__figure {
+    @include makeCircle(90px, $color-white, none);
+    display: inline-block;
+    margin-right: $size-base;
+    font-size: 44px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &__body {
+    margin-top: $size-default;
+    max-width: $article-max-width;
+  }
+}
+
+.usajobs-ms-section--media-object {
+  &__figure {
+    margin: 0 auto $size-default;
+
+    @include grid-media($ML) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__figure > amp-img {
+    @include flex(1 1 auto);
+  }
+
+  @include grid-media($ML) {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+
+    &__figure {
+      @include flex-shrink(0);
+      margin-right: $size-M;
+
+      @include grid-media($L) {
+        margin-right: $size-L;
+      }
+    }
+
+    &__body {
+      @include flex(1);
+      min-width: 0;
+    }
+  }
+}
+
+
+.usajobs-ms-section--media-object.priyanka {
+  .usajobs-ms-section--media-object__figure {
+    max-width: 252px;
+
+    @include grid-media($ML) {
+      max-width: inherit;
+      min-width: 252px;
+    }
+
+    @include grid-media($L) {
+      min-width: 336px;
+    }
+  }
+
+  .usajobs-ms-section--media-object__body-contents {
+    max-width: $article-max-width;
+  }
+}
+
+.usajobs-ms-section--media-object.climate {
+  .usajobs-ms-section--media-object__figure {
+    max-width: 320px;
+    margin-left: $size-M;
+    margin-right: 0;
+
+    @include grid-media($ML) {
+      max-width: inherit;
+      min-width: 320px;
+    }
+
+    @include grid-media($L) {
+      min-width: 368px;
+      margin-right: 0;
+    }
+  }
+
+  .usajobs-ms-section--media-object__body {
+    max-width: $article-max-width;
+  }
+}
+
+.usajobs-ms-section--qualifications,
+.usajobs-ms-section--search-cta {
+  background-color: $color-primary-darkest;
+
+  &__title,
+  &__subtitle,
+  li,
+  p {
+    color: $color-white;
+  }
+}
+
+.usajobs-ms-section--qualifications {
+}
+
+.usajobs-ms-section--open-data-cta {
+  background-color: $color-primary-alt-darkest;
+
+  &__title,
+  p {
+    color: $color-white;
+  }
 }
