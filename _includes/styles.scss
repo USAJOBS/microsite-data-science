@@ -60,6 +60,7 @@ $color-secondary-dark:       #cd2026;
 $color-secondary-darkest:    #981b1e;
 
 $color-primary-alt-darkest:  #046b99;
+$color-gray-cool-light:      #dce4ef; // lighten($color-primary, 90%)
 
 $color-white:                #ffffff;
 $color-base:                 #212121;
@@ -657,7 +658,27 @@ main {
   }
 }
 
-.usajobs-ms-section--qualifications {
+.usajobs-ms-section--opportunities {
+  &__list {
+    @include clearfix();
+    margin-top: $size-default;
+  }
+
+  &__list > &__item {
+    float: left;
+    margin-right: $size-default;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: $size-default;
+    margin-bottom: $size-default;
+    background-color: $color-gray-cool-light;
+
+    &:hover {
+      background-color: $color-gray-cool-light;
+    }
+  }
 }
 
 .usajobs-ms-section--open-data-cta {
