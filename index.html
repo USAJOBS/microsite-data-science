@@ -4,51 +4,55 @@ layout: default
 
 <main class="usajobs-content-well-full" role="main">
   <div class="usajobs-ms-hero">
-    <amp-img src="{{ site.baseurl }}/assets/images/datacenter-wide.jpg"
-      srcset="{{ site.baseurl }}/assets/images/datacenter-wide.jpg 768w,
-      {{ site.baseurl }}/assets/images/datacenter-narrow.jpg 480w,
-      {{ site.baseurl }}/assets/images/datacenter-narrow.jpg 100w"
-      width="1600"
-      height="600"
-      layout="responsive"
-      alt="A datacenter"></amp-img>
-    <div class="usajobs-ms-hero__inner">
-      <h1 class="usajobs-ms-hero__title">{{ site.title }}</h1>
-      <a href="{{ site.baseurl }}/search/" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
-        Start your search
-      </a>
+    <div class="usajobs-ms-hero__body">
+      <amp-img src="{{ site.baseurl }}/assets/images/datacenter-wide.jpg"
+        srcset="{{ site.baseurl }}/assets/images/datacenter-wide.jpg 768w,
+        {{ site.baseurl }}/assets/images/datacenter-narrow.jpg 480w,
+        {{ site.baseurl }}/assets/images/datacenter-narrow.jpg 100w"
+        width="1600"
+        height="600"
+        layout="responsive"
+        alt="A datacenter"></amp-img>
+      <div class="usajobs-ms-hero__inner">
+        <h1 class="usajobs-ms-hero__title">{{ site.title }}</h1>
+        <a href="{{ site.baseurl }}/search/" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
+          Start your search
+        </a>
+      </div>
     </div>
   </div>
 
-  <section class="usajobs-grid usajobs-ms-section usajobs-ms-section--media-object climate">
-    <div class="usajobs-ms-section--media-object__body">
-      <div class="usajobs-ms-section--media-object__body-contents">
-        <h2 class="usajobs-ms-section__title">
-          A powerful force in government
-        </h2>
-        <h3 class="usajobs-ms-section__sub-title">
-          How has the Federal Government leveraged data to produce meaningful change?
-        </h3>
-        <p>
-          See how NOAA and other Federal agencies worked together to build a tool that uses data-driven tools to boost climate resiliency. Here, you can find data related to climate change that helps inform and prepare America’s communities, businesses, and citizens. Its impact:
-        </p>
-        <blockquote class="usajobs-ms-section__quote">
-          	&ldquo;Through the release of Arctic-themed climate data, the U.S. is demonstrating its leadership in sharing free and open climate-relevant information while also encouraging public innovation and partnerships with private sector entities that are interested in leveraging this data.&rdquo; &dash; Secretary Sally Jewel
-        </blockquote>
-        <p>
-          <a href="https://toolkit.climate.gov/">Read more about this project.</a>
-        </p>
+  <section class="usajobs-grid usajobs-ms-section climate">
+    <div class="usajobs-ms-section__body usajobs-ms-section--media-object">
+      <div class="usajobs-ms-section--media-object__body">
+        <div class="usajobs-ms-section--media-object__body-contents">
+          <h2 class="usajobs-ms-section__title">
+            A powerful force in government
+          </h2>
+          <h4 class="usajobs-ms-section__sub-title">
+            How has the Federal Government leveraged data to produce meaningful change?
+          </h4>
+          <p>
+            See how NOAA and other Federal agencies worked together to build a tool that uses data-driven tools to boost climate resiliency. Here, you can find data related to climate change that helps inform and prepare America’s communities, businesses, and citizens. Its impact:
+          </p>
+          <blockquote class="usajobs-ms-section__quote">
+            	&ldquo;Through the release of Arctic-themed climate data, the U.S. is demonstrating its leadership in sharing free and open climate-relevant information while also encouraging public innovation and partnerships with private sector entities that are interested in leveraging this data.&rdquo; &dash; Secretary Sally Jewel
+          </blockquote>
+          <p>
+            <a href="https://toolkit.climate.gov/">Read more about this project.</a>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="usajobs-ms-section--media-object__figure">
-      <amp-img src="{{ site.baseurl }}/assets/images/climate-toolkit-wide.png"
-        srcset="{{ site.baseurl }}/assets/images/climate-toolkit-wide.png 768w,
-        {{ site.baseurl }}/assets/images/climate-toolkit-narrow.png 480w,
-        {{ site.baseurl }}/assets/images/climate-toolkit-narrow.png 100w"
-        width="368"
-        height="245"
-        layout="responsive"
-        alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      <div class="usajobs-ms-section--media-object__figure">
+        <amp-img src="{{ site.baseurl }}/assets/images/climate-toolkit-wide.png"
+          srcset="{{ site.baseurl }}/assets/images/climate-toolkit-wide.png 768w,
+          {{ site.baseurl }}/assets/images/climate-toolkit-narrow.png 480w,
+          {{ site.baseurl }}/assets/images/climate-toolkit-narrow.png 100w"
+          width="368"
+          height="245"
+          layout="responsive"
+          alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      </div>
     </div>
   </section>
 
@@ -57,9 +61,9 @@ layout: default
       <h2 class="usajobs-ms-section__title usajobs-ms-section--qualifications__title">
         Qualifications
       </h2>
-      <h3 class="usajobs-ms-section__subtitle usajobs-ms-section--qualifications__subtitle">
+      <h4 class="usajobs-ms-section__subtitle usajobs-ms-section--qualifications__subtitle">
         What does it take to have a career in data science in the Federal Government?
-      </h3>
+      </h4>
       <ul class="usajobs-ms-section__list">
         <li class="usajobs-ms-section-item">
           <div class="usajobs-ms-section-item__figure">
@@ -114,8 +118,11 @@ layout: default
       <h2 class="usajobs-ms-section__title">
         Opportunities
       </h2>
+      <h4>
+        What are examples of data science roles in the Federal Government?
+      </h4>
       <h3 class="usajobs-ms-section__subtitle">
-        Data Scientists have many diverse titles in Government. What are examples of data science roles in the Federal Government?
+        Search by occupation
       </h3>
       <ul class="usajobs-ms-section__list usajobs-ms-section--opportunities__list">
         {% for occupation in site.data.keywords %}
@@ -162,33 +169,35 @@ layout: default
     </div>
   </section>
 
-  <section class="usajobs-grid usajobs-ms-section usajobs-ms-section--media-object priyanka">
-    <div class="usajobs-ms-section--media-object__figure">
-      <amp-img src="{{ site.baseurl }}/assets/images/priyanka-wide.png"
-        srcset="{{ site.baseurl }}/assets/images/priyanka-wide.png 992w,
-        {{ site.baseurl }}/assets/images/priyanka-narrow.png 768w,
-        {{ site.baseurl }}/assets/images/priyanka-narrow.png 480w,
-        {{ site.baseurl }}/assets/images/priyanka-narrow.png 100w"
-        width="336"
-        height="505"
-        layout="responsive"
-        alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
-    </div>
-    <div class="usajobs-ms-section--media-object__body">
-      <div class="usajobs-ms-section--media-object__body-contents">
-        <h3 class="usajobs-ms-section__title">
-          Priyanka Oberoi, a Data Scientist in the Commerce Data Service, uses her expertise to answer tough questions.
-        </h3>
-        <blockquote class="usajobs-ms-section__quote">
-          	&ldquo;As a Data Scientist in the Commerce Data Service, which is a public startup in the Department of Commerce, I talk to teams across DOC and try to see how data science can be used to answer a question, improve a process, or measure an outcome. Since we are a small team, my responsibilities span the data science pipeline.
+  <section class="usajobs-grid usajobs-ms-section priyanka">
+    <div class="usajobs-ms-section__body usajobs-ms-section--media-object">
+      <div class="usajobs-ms-section--media-object__figure">
+        <amp-img src="{{ site.baseurl }}/assets/images/priyanka-wide.png"
+          srcset="{{ site.baseurl }}/assets/images/priyanka-wide.png 992w,
+          {{ site.baseurl }}/assets/images/priyanka-narrow.png 768w,
+          {{ site.baseurl }}/assets/images/priyanka-narrow.png 480w,
+          {{ site.baseurl }}/assets/images/priyanka-narrow.png 100w"
+          width="336"
+          height="505"
+          layout="responsive"
+          alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      </div>
+      <div class="usajobs-ms-section--media-object__body">
+        <div class="usajobs-ms-section--media-object__body-contents">
+          <h3 class="usajobs-ms-section__title">
+            Priyanka Oberoi, a Data Scientist in the Commerce Data Service, uses her expertise to answer tough questions.
+          </h3>
+          <blockquote class="usajobs-ms-section__quote">
+            	&ldquo;As a Data Scientist in the Commerce Data Service, which is a public startup in the Department of Commerce, I talk to teams across DOC and try to see how data science can be used to answer a question, improve a process, or measure an outcome. Since we are a small team, my responsibilities span the data science pipeline.
 
-            This is a pretty hands-on process where we try to understand a problem, leverage data, implement statistics, and build something that has an impact. We build data products for teams within the agency, we teach data science courses to DOC employees through the Data Academy, and we push for data usability so our open data gets used by researchers, the private sector and non-profits.&rdquo; &dash; Priyanka Oberoi
-        </blockquote>
-        <p class="usajobs-ms-section__cta-center">
-          <a href="https://toolkit.climate.gov/" class="usa-button-primary">
-            Read more about this on Medium
-          </a>
-        </p>
+              This is a pretty hands-on process where we try to understand a problem, leverage data, implement statistics, and build something that has an impact. We build data products for teams within the agency, we teach data science courses to DOC employees through the Data Academy, and we push for data usability so our open data gets used by researchers, the private sector and non-profits.&rdquo; &dash; Priyanka Oberoi
+          </blockquote>
+          <p class="usajobs-ms-section__cta-center">
+            <a href="https://toolkit.climate.gov/" class="usa-button-primary">
+              Read more about this on Medium
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </section>

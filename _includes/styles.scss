@@ -158,12 +158,14 @@ $space-stack-XXL: 0 0 $size-XXL 0;
 
 @mixin h3 {
   @include header();
+  font-family: $font-sans;
   font-size: $h3-font-size;
   font-size: rem($h3-font-size);
 }
 
 @mixin h4 {
   @include header();
+  font-family: $font-sans;
   font-size: $h4-font-size;
   font-size: rem($h4-font-size);
 }
@@ -231,7 +233,7 @@ body {
   @include box-sizing(inherit);
   @include font-smoothing;
   @include font-feature-settings;
-  font-size: $base-font-size;
+  font-size: $base-font-size-px;
   background-color: $color-white;
   margin: 0;
   padding: 0;
@@ -421,8 +423,17 @@ amp-img {
 
 // Hero
 .usajobs-ms-hero {
-  position: relative;
   max-width: 100%;
+  background-color: $color-primary-darkest;
+
+  &__body {
+    position: relative;
+    max-width: $site-max-width-L;
+
+    @include grid-media($XXXL) {
+      margin: 0 auto;
+    }
+  }
 
   &__inner {
     background: $color-primary-darkest;
@@ -471,6 +482,10 @@ main {
     line-height: $base-line-height;
     margin: 1em 0;
   }
+
+  blockquote {
+    line-height: $base-line-height;
+  }
 }
 
 .cf {
@@ -507,6 +522,10 @@ main {
   &__body {
     max-width: $site-max-width-L;
 
+    @include grid-media($XXXL) {
+      margin: 0 auto;
+    }
+
     p {
       max-width: $article-max-width;
     }
@@ -517,7 +536,6 @@ main {
   }
 
   &__subtitle {
-    font-family: $font-sans;
     margin-top: $size-default;
   }
 
@@ -605,7 +623,7 @@ main {
 }
 
 
-.usajobs-ms-section--media-object.priyanka {
+.priyanka .usajobs-ms-section--media-object {
   .usajobs-ms-section--media-object__figure {
     max-width: 252px;
 
@@ -624,20 +642,20 @@ main {
   }
 }
 
-.usajobs-ms-section--media-object.climate {
+.climate .usajobs-ms-section--media-object {
   .usajobs-ms-section--media-object__figure {
     max-width: 320px;
-    margin-left: $size-M;
-    margin-right: 0;
 
     @include grid-media($ML) {
       max-width: inherit;
       min-width: 320px;
+      margin: 0 auto;
+      padding: 0 $size-M;
     }
 
     @include grid-media($L) {
       min-width: 368px;
-      margin-right: 0;
+      padding: 0 $size-L;
     }
   }
 
@@ -674,6 +692,7 @@ main {
     padding: $size-default;
     margin-bottom: $size-default;
     background-color: $color-gray-cool-light;
+    border-radius: rem(3px);
 
     &:hover {
       background-color: $color-gray-cool-light;

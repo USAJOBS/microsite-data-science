@@ -13,36 +13,36 @@
   <meta name="description" content="Find out what it takes to have a career in data science within the Federal Government
 ">
 
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Find your next job in data science in the Federal Government" href="http://localhost:4000/feed.xml">
+  <link rel="canonical" href="http://usajobs.github.io/microsite-data-science//microsite-data-science/">
+  <link rel="alternate" type="application/rss+xml" title="Find your next job in data science in the Federal Government" href="http://usajobs.github.io/microsite-data-science//microsite-data-science/feed.xml">
 
   <!-- Favicons ================================================== -->
   <!-- 128x128 -->
-  <link rel="shortcut icon" type="image/ico" href="/assets/images/favicons/favicon.ico" />
-  <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png" />
+  <link rel="shortcut icon" type="image/ico" href="/microsite-data-science/assets/images/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="/microsite-data-science/assets/images/favicons/favicon.png" />
 
   <!-- 192x192, as recommended for Android
   http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
   -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/microsite-data-science/assets/images/favicons/favicon-192.png" />
 
   <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-  <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/favicon-57.png">
+  <link rel="apple-touch-icon-precomposed" href="/microsite-data-science/assets/images/favicons/favicon-57.png">
   <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/favicons/favicon-72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/microsite-data-science/assets/images/favicons/favicon-72.png">
   <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/favicons/favicon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/microsite-data-science/assets/images/favicons/favicon-114.png">
   <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/favicons/favicon-144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/microsite-data-science/assets/images/favicons/favicon-144.png">
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "WebPage",
-  "mainEntityOfPage": "http://localhost:4000/",
+  "mainEntityOfPage": "http://usajobs.github.io/microsite-data-science//microsite-data-science/",
   "headline": "Find your next job in data science in the Federal Government",
-  "datePublished": "2017-04-10T16:05:04-04:00",
-  "dateModified": "2017-04-10T16:05:04-04:00",
+  "datePublished": "2017-04-11T16:50:40-04:00",
+  "dateModified": "2017-04-11T16:50:40-04:00",
   "description": "Find out what it takes to have a career in data science within the Federal Government
 ",
   "author": {
@@ -54,14 +54,14 @@
     "name": "USAJOBS",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:4000/assets/images/logo-2x.png",
+      "url": "http://usajobs.github.io/microsite-data-science//microsite-data-science/assets/images/logo-2x.png",
       "width": "376",
       "height": "90"
     }
   },
   "image": {
     "@type": "ImageObject",
-    "url": "http://localhost:4000/assets/images/logo-2x.png",
+    "url": "http://usajobs.github.io/microsite-data-science//microsite-data-science/assets/images/logo-2x.png",
     "height": "376",
     "width": "90"
   }
@@ -2435,7 +2435,7 @@ body {
   -webkit-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
-  font-size: 1.7rem;
+  font-size: 17px;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -2468,6 +2468,7 @@ h3 {
   line-height: 1.3;
   margin-bottom: 0.5rem;
   margin-top: 0;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, "Roboto", sans-serif;
   font-size: 24px;
   font-size: 2.4rem; }
 
@@ -2477,6 +2478,7 @@ h4 {
   line-height: 1.3;
   margin-bottom: 0.5rem;
   margin-top: 0;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, "Roboto", sans-serif;
   font-size: 19px;
   font-size: 1.9rem; }
 
@@ -2787,8 +2789,14 @@ amp-img {
       padding-left: 3rem; } }
 
 .usajobs-ms-hero {
-  position: relative;
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: #112e51; }
+  .usajobs-ms-hero__body {
+    position: relative;
+    max-width: 160rem; }
+    @media only screen and (min-width: 100em) {
+      .usajobs-ms-hero__body {
+        margin: 0 auto; } }
   .usajobs-ms-hero__inner {
     background: #112e51;
     padding: 3rem 1.5rem; }
@@ -2821,6 +2829,8 @@ main {
   main p {
     line-height: 1.5;
     margin: 1em 0; }
+  main blockquote {
+    line-height: 1.5; }
 
 .cf:after {
   content: "";
@@ -2851,12 +2861,14 @@ main {
       padding-bottom: 0; } }
   .usajobs-ms-section__body {
     max-width: 160rem; }
+    @media only screen and (min-width: 100em) {
+      .usajobs-ms-section__body {
+        margin: 0 auto; } }
     .usajobs-ms-section__body p {
       max-width: 60rem; }
   .usajobs-ms-section__cta-center {
     text-align: center; }
   .usajobs-ms-section__subtitle {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, "Roboto", sans-serif;
     margin-top: 1.5rem; }
   .usajobs-ms-section__quote {
     margin: 1.5rem;
@@ -2974,31 +2986,31 @@ main {
       flex: 1;
       min-width: 0; } }
 
-.usajobs-ms-section--media-object.priyanka .usajobs-ms-section--media-object__figure {
+.priyanka .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
   max-width: 252px; }
   @media only screen and (min-width: 48em) {
-    .usajobs-ms-section--media-object.priyanka .usajobs-ms-section--media-object__figure {
+    .priyanka .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
       max-width: inherit;
       min-width: 252px; } }
   @media only screen and (min-width: 62em) {
-    .usajobs-ms-section--media-object.priyanka .usajobs-ms-section--media-object__figure {
+    .priyanka .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
       min-width: 336px; } }
-.usajobs-ms-section--media-object.priyanka .usajobs-ms-section--media-object__body-contents {
+.priyanka .usajobs-ms-section--media-object .usajobs-ms-section--media-object__body-contents {
   max-width: 60rem; }
 
-.usajobs-ms-section--media-object.climate .usajobs-ms-section--media-object__figure {
-  max-width: 320px;
-  margin-left: 3rem;
-  margin-right: 0; }
+.climate .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
+  max-width: 320px; }
   @media only screen and (min-width: 48em) {
-    .usajobs-ms-section--media-object.climate .usajobs-ms-section--media-object__figure {
+    .climate .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
       max-width: inherit;
-      min-width: 320px; } }
+      min-width: 320px;
+      margin: 0 auto;
+      padding: 0 3rem; } }
   @media only screen and (min-width: 62em) {
-    .usajobs-ms-section--media-object.climate .usajobs-ms-section--media-object__figure {
+    .climate .usajobs-ms-section--media-object .usajobs-ms-section--media-object__figure {
       min-width: 368px;
-      margin-right: 0; } }
-.usajobs-ms-section--media-object.climate .usajobs-ms-section--media-object__body {
+      padding: 0 4.5rem; } }
+.climate .usajobs-ms-section--media-object .usajobs-ms-section--media-object__body {
   max-width: 60rem; }
 
 .usajobs-ms-section--qualifications,
@@ -3026,7 +3038,8 @@ main {
   display: inline-block;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  background-color: #dce4ef; }
+  background-color: #dce4ef;
+  border-radius: 0.3rem; }
   .usajobs-ms-section--opportunities__link:hover {
     background-color: #dce4ef; }
 
@@ -3052,7 +3065,7 @@ main {
       <header class="usa-banner-header">
         <div class="usajobs-grid usa-banner-inner usajobs-nav--full_bleed__banner-inner">
         <span class="usa-banner-header__img">
-          <amp-img src="/assets/images/favicons/favicon-57.png" width="20" height="20" alt="U.S. flag" />
+          <amp-img src="/microsite-data-science/assets/images/favicons/favicon-57.png" width="20" height="20" alt="U.S. flag" />
         </span>
         <p>An official website of the United States government</p>
         </div>
@@ -3065,51 +3078,55 @@ main {
 
     <main class="usajobs-content-well-full" role="main">
   <div class="usajobs-ms-hero">
-    <amp-img src="/assets/images/datacenter-wide.jpg"
-      srcset="/assets/images/datacenter-wide.jpg 768w,
-      /assets/images/datacenter-narrow.jpg 480w,
-      /assets/images/datacenter-narrow.jpg 100w"
-      width="1600"
-      height="600"
-      layout="responsive"
-      alt="A datacenter"></amp-img>
-    <div class="usajobs-ms-hero__inner">
-      <h1 class="usajobs-ms-hero__title">Find your next job in data science in the Federal Government</h1>
-      <a href="/search/" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
-        Start your search
-      </a>
+    <div class="usajobs-ms-hero__body">
+      <amp-img src="/microsite-data-science/assets/images/datacenter-wide.jpg"
+        srcset="/microsite-data-science/assets/images/datacenter-wide.jpg 768w,
+        /microsite-data-science/assets/images/datacenter-narrow.jpg 480w,
+        /microsite-data-science/assets/images/datacenter-narrow.jpg 100w"
+        width="1600"
+        height="600"
+        layout="responsive"
+        alt="A datacenter"></amp-img>
+      <div class="usajobs-ms-hero__inner">
+        <h1 class="usajobs-ms-hero__title">Find your next job in data science in the Federal Government</h1>
+        <a href="/microsite-data-science/search/" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
+          Start your search
+        </a>
+      </div>
     </div>
   </div>
 
-  <section class="usajobs-grid usajobs-ms-section usajobs-ms-section--media-object climate">
-    <div class="usajobs-ms-section--media-object__body">
-      <div class="usajobs-ms-section--media-object__body-contents">
-        <h2 class="usajobs-ms-section__title">
-          A powerful force in government
-        </h2>
-        <h3 class="usajobs-ms-section__sub-title">
-          How has the Federal Government leveraged data to produce meaningful change?
-        </h3>
-        <p>
-          See how NOAA and other Federal agencies worked together to build a tool that uses data-driven tools to boost climate resiliency. Here, you can find data related to climate change that helps inform and prepare America’s communities, businesses, and citizens. Its impact:
-        </p>
-        <blockquote class="usajobs-ms-section__quote">
-          	&ldquo;Through the release of Arctic-themed climate data, the U.S. is demonstrating its leadership in sharing free and open climate-relevant information while also encouraging public innovation and partnerships with private sector entities that are interested in leveraging this data.&rdquo; &dash; Secretary Sally Jewel
-        </blockquote>
-        <p>
-          <a href="https://toolkit.climate.gov/">Read more about this project.</a>
-        </p>
+  <section class="usajobs-grid usajobs-ms-section climate">
+    <div class="usajobs-ms-section__body usajobs-ms-section--media-object">
+      <div class="usajobs-ms-section--media-object__body">
+        <div class="usajobs-ms-section--media-object__body-contents">
+          <h2 class="usajobs-ms-section__title">
+            A powerful force in government
+          </h2>
+          <h4 class="usajobs-ms-section__sub-title">
+            How has the Federal Government leveraged data to produce meaningful change?
+          </h4>
+          <p>
+            See how NOAA and other Federal agencies worked together to build a tool that uses data-driven tools to boost climate resiliency. Here, you can find data related to climate change that helps inform and prepare America’s communities, businesses, and citizens. Its impact:
+          </p>
+          <blockquote class="usajobs-ms-section__quote">
+            	&ldquo;Through the release of Arctic-themed climate data, the U.S. is demonstrating its leadership in sharing free and open climate-relevant information while also encouraging public innovation and partnerships with private sector entities that are interested in leveraging this data.&rdquo; &dash; Secretary Sally Jewel
+          </blockquote>
+          <p>
+            <a href="https://toolkit.climate.gov/">Read more about this project.</a>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="usajobs-ms-section--media-object__figure">
-      <amp-img src="/assets/images/climate-toolkit-wide.png"
-        srcset="/assets/images/climate-toolkit-wide.png 768w,
-        /assets/images/climate-toolkit-narrow.png 480w,
-        /assets/images/climate-toolkit-narrow.png 100w"
-        width="368"
-        height="245"
-        layout="responsive"
-        alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      <div class="usajobs-ms-section--media-object__figure">
+        <amp-img src="/microsite-data-science/assets/images/climate-toolkit-wide.png"
+          srcset="/microsite-data-science/assets/images/climate-toolkit-wide.png 768w,
+          /microsite-data-science/assets/images/climate-toolkit-narrow.png 480w,
+          /microsite-data-science/assets/images/climate-toolkit-narrow.png 100w"
+          width="368"
+          height="245"
+          layout="responsive"
+          alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      </div>
     </div>
   </section>
 
@@ -3118,9 +3135,9 @@ main {
       <h2 class="usajobs-ms-section__title usajobs-ms-section--qualifications__title">
         Qualifications
       </h2>
-      <h3 class="usajobs-ms-section__subtitle usajobs-ms-section--qualifications__subtitle">
+      <h4 class="usajobs-ms-section__subtitle usajobs-ms-section--qualifications__subtitle">
         What does it take to have a career in data science in the Federal Government?
-      </h3>
+      </h4>
       <ul class="usajobs-ms-section__list">
         <li class="usajobs-ms-section-item">
           <div class="usajobs-ms-section-item__figure">
@@ -3175,8 +3192,11 @@ main {
       <h2 class="usajobs-ms-section__title">
         Opportunities
       </h2>
+      <h4>
+        What are examples of data science roles in the Federal Government?
+      </h4>
       <h3 class="usajobs-ms-section__subtitle">
-        Data Scientists have many diverse titles in Government. What are examples of data science roles in the Federal Government?
+        Search by occupation
       </h3>
       <ul class="usajobs-ms-section__list usajobs-ms-section--opportunities__list">
         
@@ -3407,33 +3427,35 @@ main {
     </div>
   </section>
 
-  <section class="usajobs-grid usajobs-ms-section usajobs-ms-section--media-object priyanka">
-    <div class="usajobs-ms-section--media-object__figure">
-      <amp-img src="/assets/images/priyanka-wide.png"
-        srcset="/assets/images/priyanka-wide.png 992w,
-        /assets/images/priyanka-narrow.png 768w,
-        /assets/images/priyanka-narrow.png 480w,
-        /assets/images/priyanka-narrow.png 100w"
-        width="336"
-        height="505"
-        layout="responsive"
-        alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
-    </div>
-    <div class="usajobs-ms-section--media-object__body">
-      <div class="usajobs-ms-section--media-object__body-contents">
-        <h3 class="usajobs-ms-section__title">
-          Priyanka Oberoi, a Data Scientist in the Commerce Data Service, uses her expertise to answer tough questions.
-        </h3>
-        <blockquote class="usajobs-ms-section__quote">
-          	&ldquo;As a Data Scientist in the Commerce Data Service, which is a public startup in the Department of Commerce, I talk to teams across DOC and try to see how data science can be used to answer a question, improve a process, or measure an outcome. Since we are a small team, my responsibilities span the data science pipeline.
+  <section class="usajobs-grid usajobs-ms-section priyanka">
+    <div class="usajobs-ms-section__body usajobs-ms-section--media-object">
+      <div class="usajobs-ms-section--media-object__figure">
+        <amp-img src="/microsite-data-science/assets/images/priyanka-wide.png"
+          srcset="/microsite-data-science/assets/images/priyanka-wide.png 992w,
+          /microsite-data-science/assets/images/priyanka-narrow.png 768w,
+          /microsite-data-science/assets/images/priyanka-narrow.png 480w,
+          /microsite-data-science/assets/images/priyanka-narrow.png 100w"
+          width="336"
+          height="505"
+          layout="responsive"
+          alt="The frontpage of the toolkit.climate.gov web site."></amp-img>
+      </div>
+      <div class="usajobs-ms-section--media-object__body">
+        <div class="usajobs-ms-section--media-object__body-contents">
+          <h3 class="usajobs-ms-section__title">
+            Priyanka Oberoi, a Data Scientist in the Commerce Data Service, uses her expertise to answer tough questions.
+          </h3>
+          <blockquote class="usajobs-ms-section__quote">
+            	&ldquo;As a Data Scientist in the Commerce Data Service, which is a public startup in the Department of Commerce, I talk to teams across DOC and try to see how data science can be used to answer a question, improve a process, or measure an outcome. Since we are a small team, my responsibilities span the data science pipeline.
 
-            This is a pretty hands-on process where we try to understand a problem, leverage data, implement statistics, and build something that has an impact. We build data products for teams within the agency, we teach data science courses to DOC employees through the Data Academy, and we push for data usability so our open data gets used by researchers, the private sector and non-profits.&rdquo; &dash; Priyanka Oberoi
-        </blockquote>
-        <p class="usajobs-ms-section__cta-center">
-          <a href="https://toolkit.climate.gov/" class="usa-button-primary">
-            Read more about this on Medium
-          </a>
-        </p>
+              This is a pretty hands-on process where we try to understand a problem, leverage data, implement statistics, and build something that has an impact. We build data products for teams within the agency, we teach data science courses to DOC employees through the Data Academy, and we push for data usability so our open data gets used by researchers, the private sector and non-profits.&rdquo; &dash; Priyanka Oberoi
+          </blockquote>
+          <p class="usajobs-ms-section__cta-center">
+            <a href="https://toolkit.climate.gov/" class="usa-button-primary">
+              Read more about this on Medium
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
