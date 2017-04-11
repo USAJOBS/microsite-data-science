@@ -564,8 +564,23 @@ main {
     margin-right: 4.8291588071%;
   }
 
+  @include grid-media($XL) {
+    width: 23.2317609825%;
+    margin-right: 2.3576520234%;
+  }
+
   &:nth-child(2n) {
     @include grid-media($ML) {
+      margin-right: 0;
+    }
+
+    @include grid-media($XL) {
+      margin-right: 2.3576520234%;
+    }
+  }
+
+  &:last-child {
+    @include grid-media($XL) {
       margin-right: 0;
     }
   }
