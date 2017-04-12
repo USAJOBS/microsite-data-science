@@ -15,7 +15,7 @@ layout: default
         alt="A datacenter"></amp-img>
       <div class="usajobs-ms-hero__inner">
         <h1 class="usajobs-ms-hero__title">{{ site.title }}</h1>
-        <a href="{{ site.baseurl }}/search/" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
+        <a id="hero-start-search" href="https://www.usajobs.gov/Search/Results/?j=0110&j=1530&j=1529&j=1520&j=1550&j=1515&j=2210&j=0343&j=1102&j=1101&k=data+analysis" class="usa-button usa-button-secondary usajobs-button usajobs-ms-hero__button">
           Start your search
         </a>
       </div>
@@ -39,7 +39,7 @@ layout: default
             	&ldquo;Through the release of Arctic-themed climate data, the U.S. is demonstrating its leadership in sharing free and open climate-relevant information while also encouraging public innovation and partnerships with private sector entities that are interested in leveraging this data.&rdquo; &dash; Secretary Sally Jewel
           </blockquote>
           <p>
-            <a href="https://toolkit.climate.gov/">Read more about this project.</a>
+            <a id="climate-cta" href="https://toolkit.climate.gov/">Read more about this project.</a>
           </p>
         </div>
       </div>
@@ -129,7 +129,7 @@ layout: default
         {%   assign title = occupation[0] %}
         {%   assign occ = site.data.keywords[title] %}
         <li class="usajobs-ms-section__item usajobs-ms-section--opportunities__item">
-          <a class="usajobs-ms-section--opportunities__link" href="https://www.usajobs.gov/Search/Results?k={{ occ.keyword }}">
+          <a id="occupations-{{ occ.keyword }}" class="usajobs-ms-section--opportunities__link" href="https://www.usajobs.gov/Search/Results?k={{ occ.keyword }}">
             {{ title }}
           </a>
         </li>
@@ -144,7 +144,7 @@ layout: default
         {%   assign title = series[0] %}
         {%   assign section = site.data.series[title] %}
         <li class="usajobs-ms-section__item usajobs-ms-section--opportunities__item">
-          <a class="usajobs-ms-section--opportunities__link" href="https://www.usajobs.gov/Search/Results?j={{ section.code }}">
+          <a id="series-{{ section.code }}" class="usajobs-ms-section--opportunities__link" href="https://www.usajobs.gov/Search/Results?j={{ section.code }}">
             {{ title }} ({{ section.code }})
           </a>
         </li>
@@ -162,7 +162,7 @@ layout: default
         What kind of data could you be working with in the Federal Government? Use this link to explore data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more from 14 different domains.
       </p>
       <p>
-        <a href="https://uat.usajobs.gov/Search/Results/?j=0110&j=2210&j=1550" class="usa-button usa-button-outline-inverse">
+        <a id="open-data-cta" href="https://www.data.gov/" class="usa-button usa-button-outline-inverse">
           Learn more
         </a>
       </p>
@@ -193,7 +193,7 @@ layout: default
               This is a pretty hands-on process where we try to understand a problem, leverage data, implement statistics, and build something that has an impact. We build data products for teams within the agency, we teach data science courses to DOC employees through the Data Academy, and we push for data usability so our open data gets used by researchers, the private sector and non-profits.&rdquo; &dash; Priyanka Oberoi
           </blockquote>
           <p class="usajobs-ms-section__cta-center">
-            <a href="https://toolkit.climate.gov/" class="usa-button-primary">
+            <a id="priyanka-cta" href="https://medium.com/data-in-action/the-most-exciting-new-frontier-is-charting-what-is-already-there-a8556007358e" class="usa-button-primary">
               Read more about this on Medium
             </a>
           </p>
@@ -210,7 +210,7 @@ layout: default
         If you are interested in a career in data science in the government, we are looking for individuals with the training and curiosity to make discoveries in the world of big data. Find your opportunity to help shape America’s future by clicking the button below!
       </p>
       <p>
-        <a href="https://uat.usajobs.gov/Search/Results/?j=0110&j=2210&j=1550" class="usa-button usa-button-secondary">
+        <a id="search-cta" href="https://www.usajobs.gov/Search/Results/?j=0110&j=1530&j=1529&j=1520&j=1550&j=1515&j=2210&j=0343&j=1102&j=1101&k=data+analysis" class="usa-button usa-button-secondary">
           Start your search
         </a>
       </p>

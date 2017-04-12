@@ -7,7 +7,90 @@
   "triggers": {
     "trackPageview": {
       "on": "visible",
-      "request": "pageview"
+      "request": "pageview",
+      "vars": {
+        "title": "Data Science microsite"
+      }
+    },
+    "trackHeroClicks": {
+      "on": "click",
+      "selector": "#hero-start-search",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-top-banner-search",
+        "eventAction": "click",
+        "eventLabel": "https://www.usajobs.gov/Search/Results/?j=0110&j=1530&j=1529&j=1520&j=1550&j=1515&j=2210&j=0343&j=1102&j=1101&k=data+analysis"
+      }
+    },
+    "trackClimateClicks": {
+      "on": "click",
+      "selector": "#climate-cta",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-landing-page-top-content-link",
+        "eventAction": "click",
+        "eventLabel": "https://toolkit.climate.gov"
+      }
+    },
+{% strip %}
+{% for occupation in site.data.keywords %}
+{%   assign title = occupation[0] %}
+{%   assign occ = site.data.keywords[title] %}
+    "trackOccupationsClicks": {
+      "on": "click",
+      "selector": "#occupations-{{ occ.keyword }}",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-opportunities-search",
+        "eventAction": "click",
+        "eventLabel": "https://www.usajobs.gov/Search/Results?k={{ occ.keyword }}"
+      }
+    },
+{% endfor %}
+{% for series in site.data.series %}
+{%   assign title = series[0] %}
+{%   assign section = site.data.series[title] %}
+    "trackSeriesClicks": {
+      "on": "click",
+      "selector": "#series-{{ section.code }}",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-series-search",
+        "eventAction": "click",
+        "eventLabel": "https://www.usajobs.gov/Search/Results?j={{ section.code }}"
+      }
+    },
+{% endfor %}
+{% endstrip %}
+    "trackOpenDataClicks": {
+      "on": "click",
+      "selector": "#open-data-cta",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-landing-page-learn-more",
+        "eventAction": "click",
+        "eventLabel": "https://www.data.gov"
+      }
+    },
+    "trackPriyankaClicks": {
+      "on": "click",
+      "selector": "#priyanka-cta",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-landing-page-outbound-link",
+        "eventAction": "click",
+        "eventLabel": "https://medium.com/data-in-action/the-most-exciting-new-frontier-is-charting-what-is-already-there-a8556007358e"
+      }
+    },
+    "trackFooterClicks": {
+      "on": "click",
+      "selector": "#search-cta",
+      "request": "event",
+      "vars": {
+        "eventCategory": "microsite-landing-page-link",
+        "eventAction": "click",
+        "eventLabel": "https://www.usajobs.gov/Search/Results/?j=0110&j=1530&j=1529&j=1520&j=1550&j=1515&j=2210&j=0343&j=1102&j=1101&k=data+analysis"
+      }
     }
   }
 }

@@ -1,23 +1,31 @@
 Operations Research:
   code: 1515
+  id: operations-research
 
 Public Health Specialist:
   code: 0685
+  id: public-health-specialist
 
 Information Technology Management:
   code: 2210
+  id: information-technology-management
 
 Contracting:
   code: 1102
+  id: contracting
 
 Computer Science:
   code: 1550
+  id: computer-science
 
 Mathematics:
   code: 1520
+  id: mathematics
 
 Economist:
   code: "0110"
+  id: economist
 
 General Mathematics and Statistics:
   code: 1501
+  id: general-mathematics-and-statistics

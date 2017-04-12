@@ -1,50 +1,67 @@
 Social Science Analyst:
   keyword: social+science+analyst
+  id: social-science-analyst
 
 Policy Advisor:
   keyword: policy+advisor
+  id: policy-advisor
 
 Mathematical Analyst:
   keyword: mathematical+analyst
+  id: mathematical-analyst
 
 Economist Research Analyst:
   keyword: economic+research+analyst
+  id: economic-research-analyst
 
 Computer Scientist:
   keyword: computer+scientist
+  id: computer-scientist
 
 IT Specialist:
   keyword: IT+specialist
+  id: IT-specialist
 
 Operations Research Analyst:
   keyword: operations+research+analyst
+  id: operations-research-analyst
 
 Data Engineer:
   keyword: data+engineer
+  id: data-engineer
 
 Business Intelligence Specialist:
   keyword: business+intelligence+specialist
+  id: business-intelligence-specialist
 
 Research Analyst:
   keyword: research+analyst
+  id: research-analyst
 
 Chief Data Officer:
   keyword: chief+data+officer
+  id: chief-data-officer
 
 Enterprise Data Manager:
   keyword: enterprise+data+manager
+  id: enterprise-data-manager
 
 Management and Program Analyst:
   keyword: management+and+program+analyst
+  id: management-and-program-analyst
 
 Public Health Analyst:
   keyword: public+health+analyst
+  id: public-health-analyst
 
 Data Analyst:
   keyword: data+analyst
+  id: data-analyst
 
 Procurement Analyst:
   keyword: procurement+analyst
+  id: procurement-analyst
 
 Health Insurance Analyst:
   keyword: health+insurance+analyst
+  id: health-insurance-analyst
