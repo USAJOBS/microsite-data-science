@@ -26,11 +26,12 @@
   },
   "homepage": "http://usajobs.github.io/microsite-data-science/",
   "devDependencies": {
-    "broken-link-checker": "^0.7.4",
+    "broken-link-checker": "^0.7.6",
     "grunt": "^1.0.1",
     "grunt-a11y": "^0.1.4",
+    "grunt-base64": "^0.1.0",
     "grunt-cli": "^1.2.0",
-    "grunt-html": "^8.3.2",
+    "grunt-html": "^8.4.0",
     "grunt-link-checker": "^0.2.0",
     "grunt-mdspell": "^0.4.0",
     "grunt-notify": "^0.4.5",
@@ -41,7 +42,8 @@
     "time-grunt": "^1.4.0"
   },
   "scripts": {
-    "all": "npm run build && npm run deploy",
+    "all": "npm run prebuild && npm run build && npm run deploy",
+    "prebuild": "grunt prebuild",
     "build": "grunt build",
     "deploy:cloud": "grunt build; cf push",
     "deploy": "git subtree push --prefix _dist origin gh-pages",
