@@ -43,7 +43,6 @@
   },
   "scripts": {
     "all": "npm run prebuild && npm run build && npm run deploy",
-    "prebuild": "grunt prebuild",
     "build": "grunt build",
     "deploy:cloud": "grunt build; cf push",
     "deploy": "git subtree push --prefix _dist origin gh-pages",

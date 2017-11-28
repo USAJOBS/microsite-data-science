@@ -20,16 +20,6 @@ module.exports = function(grunt) {
         command: "bundle exec jekyll serve --baseurl ''"
       }
     },
-    base64: {
-      fonts: {
-        files: {
-          'assets/fonts/sourcesanspro-regular-webfont.woff.b64': 'assets/fonts/sourcesanspro-regular-webfont.woff',
-          'assets/fonts/sourcesanspro-bold-webfont.woff.b64': 'assets/fonts/sourcesanspro-bold-webfont.woff',
-          'assets/fonts/merriweather-regular-webfont.woff.b64': 'assets/fonts/merriweather-regular-webfont.woff',
-          'assets/fonts/merriweather-bold-webfont.woff.b64': 'assets/fonts/merriweather-bold-webfont.woff'
-        }
-      }
-    },
     notify_hooks: {
       options: {
         enabled: true,
@@ -88,5 +78,4 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', ['shell:jekyllServe']);
   grunt.registerTask('build', ['shell:jekyllBuild']);
   grunt.registerTask('lint', ['scsslint']);
-  grunt.registerTask('prebuild', ['base64']);
 };
