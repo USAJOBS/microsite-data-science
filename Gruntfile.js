@@ -23,7 +23,6 @@ module.exports = function(grunt) {
     base64: {
       fonts: {
         files: {
-          'assets/fonts/fontawesome-webfont.woff.b64': 'assets/fonts/fontawesome-webfont.woff',
           'assets/fonts/sourcesanspro-regular-webfont.woff.b64': 'assets/fonts/sourcesanspro-regular-webfont.woff',
           'assets/fonts/sourcesanspro-bold-webfont.woff.b64': 'assets/fonts/sourcesanspro-bold-webfont.woff',
           'assets/fonts/merriweather-regular-webfont.woff.b64': 'assets/fonts/merriweather-regular-webfont.woff',

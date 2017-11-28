@@ -1,6 +1,5 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
-@import 'font-awesome/scss/font-awesome';
 
 @font-face {
   font-family: "Source Sans Pro";
@@ -617,15 +616,6 @@ main {
 }
 
 .usajobs-ms-section-item {
-  &__figure {
-    @include makeCircle(90px, $color-white, none);
-    display: inline-block;
-    margin-right: $size-base;
-    font-size: 44px;
-    text-align: center;
-    vertical-align: middle;
-  }
-
   &__body {
     margin-top: $size-default;
     max-width: $article-max-width;
