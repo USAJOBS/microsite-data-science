@@ -1,6 +1,24 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/merriweather-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/merriweather-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/sourcesanspro-regular-webfont.ttf') format('truetype');
+}
+
 // Typography
 $em-base:             10px;
 $rs:                  17px;
