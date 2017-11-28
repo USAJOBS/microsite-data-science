@@ -18,6 +18,7 @@ exclude:
 - Gemfile.lock
 - Gruntfile.js
 - package.json
+- package-lock.json
 - README.md
 - LICENSE.md
 - CONTRIBUTING.md
