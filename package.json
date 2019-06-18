@@ -14,11 +14,11 @@
   },
   "author": "Lab @ OPM",
   "contributors": [
-    "Hareem Mannan <hareem.mannan@opm.gov>",
-    "Matthew Dingee <matthew.dingee@opm.gov>",
+    "Hareem Mannan",
+    "Matthew Dingee",
     "Debbie LeNard <deborah.lenard@opm.gov>",
-    "Kyhry Taylor <kyhry.taylor@opm.gov>",
-    "Peter Toohey <peter.toohey@opm.gov>"
+    "Kyhry Taylor",
+    "Peter Toohey"
   ],
   "license": "SEE LICENSE in LICENSE.md",
   "bugs": {
@@ -27,20 +27,20 @@
   "homepage": "http://usajobs.github.io/microsite-data-science/",
   "devDependencies": {
     "broken-link-checker": "^0.7.8",
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "grunt-a11y": "^0.1.4",
     "grunt-base64": "^0.1.0",
     "grunt-cli": "^1.3.2",
-    "grunt-html": "^8.4.0",
+    "grunt-html": "^11.0.0",
     "grunt-link-checker": "^0.2.0",
     "grunt-mdspell": "^0.4.0",
     "grunt-notify": "^0.4.5",
     "grunt-scss-lint": "^0.5.0",
-    "grunt-shell": "^2.1.0",
-    "load-grunt-tasks": "^3.5.0",
+    "grunt-shell": "^3.0.1",
+    "load-grunt-tasks": "^5.0.0",
     "lodash": ">=4.17.5",
     "opener": "^1.5.1",
-    "time-grunt": "^1.4.0"
+    "time-grunt": "^2.0.0"
   },
   "scripts": {
     "all": "npm run prebuild && npm run build && npm run deploy",
